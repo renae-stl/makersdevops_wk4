@@ -21,4 +21,3 @@ resource "azurerm_resource_group" "rg-hello-azure" {
 }    
 
 
-
