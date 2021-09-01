@@ -1,3 +1,6 @@
+provider "azurerm" {
+  features {}
+}
 terraform {
   required_providers {
     azurerm = {
@@ -11,9 +14,6 @@ terraform {
         container_name       = "makersteam2container"
         key                  = "terraform.tfstate"
     }
-}
-provider "azurerm" {
-  features {}
 }
 resource "azurerm_resource_group" "rg-hello-azure" {
   name     = "rg-hello-azure"
