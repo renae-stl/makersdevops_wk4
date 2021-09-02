@@ -26,5 +26,30 @@ resource "azurerm_container_registry" "acr" {
 
 }
 
+resource "azurerm_app_service_plan" "main" {
+  name                = "team2sp"
+  location            = "westeurope"
+  resource_group_name = "Team2ResourceGroup2"
+  kind                = "Linux"
+  reserved            = true
+
+  sku {
+    tier = "Standard"
+    size = "S1"
+  }
+}
+
+resource "azurerm_app_service" "main" {
+  name                = "team2appservice"
+  location            = azurerm_app_service_plan.main.location
+  resource_group_name = "Team2ResourceGroup2"
+  app_service_plan_id = azurerm_app_service_plan.main.id
+
+  site_config {
+    linux_fx_version = "NODE|10.14"
+  }
+
+}
+
 
 
