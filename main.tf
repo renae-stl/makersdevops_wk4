@@ -7,12 +7,12 @@ terraform {
   }
 
   backend "azurerm" {
-      resource_group_name  = "Team2ResourceGroup2"
-      storage_account_name = "makersteam2storage"
-      container_name       = "makersteam2container"
-      key                  = "terraform.tfstate"
+    resource_group_name  = "Team2ResourceGroup2"
+    storage_account_name = "makersteam2storage"
+    container_name       = "makersteam2container"
+    key                  = "terraform.tfstate"
   }
-}    
+}
 
 resource "azurerm_container_registry" "acr" {
   name                = "Team2cr"
