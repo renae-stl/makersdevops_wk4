@@ -18,12 +18,12 @@ terraform {
 }
 
 resource "azurerm_container_registry" "acr" {
-  name = "Team2cr"
+  name                = "Team2cr"
   resource_group_name = "Team2ResourceGroup2"
   location            = "westeurope"
   admin_enabled       = false
   sku                 = "Premium"
-  
+
 }
 
 
