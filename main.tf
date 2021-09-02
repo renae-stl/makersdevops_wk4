@@ -1,3 +1,6 @@
+provider "azurerm" {
+  features {}
+}
 terraform {
   required_providers {
     azurerm = {
@@ -5,6 +8,7 @@ terraform {
       version = "=2.46.0"
     }
   }
+
     backend "azurerm" {
         resource_group_name  = "Team2ResourceGroup2"
         storage_account_name = "makersteam2storage"
@@ -30,5 +34,6 @@ terraform {
     }]
   }
 }    
+
 
 
