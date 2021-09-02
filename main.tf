@@ -19,18 +19,6 @@ resource "azurerm_container_registry" "acr" {
   resource_group_name = "Team2ResourceGroup2"
   location            = "westeurope"
   admin_enabled       = false
-  georeplications = [
-    {
-      location                = "West Europe"
-      zone_redundancy_enabled = true
-      tags                    = {}
-    },
-    {
-      location                = "westeurope"
-      zone_redundancy_enabled = true
-      tags                    = {}
-    }
-  ]
 }
 
 
